@@ -1,0 +1,12 @@
+node_modules/
+.env
+*.log
+npm-debug.log*
+
+# Test files (optional — remove if you want to keep them)
+test_*.js
+
+# Scripts (optional backfill scripts)
+# scripts/
+
+.DS_Store
