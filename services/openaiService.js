@@ -125,19 +125,21 @@ const generateStreamResponse = async (messages, requestedModel = "auto", faculty
     const facultySection = facultyContext
         ? `\n\n${facultyContext}\n\nDIRECTIVE (MANDATORY — follow exactly):
 1. The FACULTY DATABASE RECORDS above are official Metropolitan University public directory data. Present them IMMEDIATELY and COMPLETELY — do NOT ask the user for more clarification.
-2. For EVERY faculty record found, list: Name, Designation, Department, Email, Phone, and Profile URL.
-3. If Phone shows "Not listed on website" — say "Phone: Not listed on the university website." DO NOT pretend you cannot find the person.
-4. If Email shows "Not listed on website" — say "Email: Not listed on the university website."
-5. NEVER say "I can't provide contact details" or "I don't have that information" — that is WRONG. The records ARE provided above.
-6. NEVER ask the user follow-up questions when records are already found. Present all available data immediately.
-7. The user may write in Bengali, Banglish, or English — respond in the same language they used.
-8. Format your response clearly. Example for a query about a teacher:
+2. For EVERY faculty record found, display: photo (if Photo URL exists), Name, Designation, Department, Email, Phone, and Profile URL.
+3. If Photo URL is provided, ALWAYS render it as a markdown image at the top: ![Name](Photo URL)
+4. If Phone shows "Not listed on website" — say "Phone: Not listed on the university website." DO NOT pretend you cannot find the person.
+5. If Email shows "Not listed on website" — say "Email: Not listed on the university website."
+6. NEVER say "I can't provide contact details" or "I don't have that information" — that is WRONG. The records ARE provided above.
+7. NEVER ask the user follow-up questions when records are already found. Present all available data immediately.
+8. The user may write in Bengali, Banglish, or English — respond in the same language they used.
+9. Format your response clearly. Example:
+   ![Abu Jafar Md Jakaria](https://www.metrouni.edu.bd/images/xyz.jpg)
    **Name:** Abu Jafar Md Jakaria
    **Designation:** Lecturer
    **Department:** CSE
-   **Email:** jafar@metrouni.edu.bd
+   **Email:** Not listed on the university website
    **Phone:** Not listed on the university website
-   **Profile:** [link]`
+   **Profile:** [View Profile](https://www.metrouni.edu.bd/...)`
         : '';
 
 

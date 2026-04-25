@@ -10,3 +10,6 @@ test_*.js
 # scripts/
 
 .DS_Store
+
+# Faculty data — kept local only, not pushed to GitHub
+data/faculty.json

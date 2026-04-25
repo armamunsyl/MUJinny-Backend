@@ -125,6 +125,7 @@ const formatFacultyContext = (records) => {
         lines.push(`Email: ${r.email?.length ? r.email.join(', ') : 'Not listed on website'}`);
         lines.push(`Phone: ${r.phone?.length ? r.phone.join(', ') : 'Not listed on website'}`);
         lines.push(`Profile URL: ${r.profileUrl || 'N/A'}`);
+        if (r.photoUrl) lines.push(`Photo URL: ${r.photoUrl}`);
         if (r.officeLocation) lines.push(`Office: ${r.officeLocation}`);
         if (r.researchInterests?.length) lines.push(`Research Interests: ${r.researchInterests.join(', ')}`);
         if (r.bio && r.bio.length > 10) lines.push(`Bio: ${r.bio.slice(0, 300)}...`);
